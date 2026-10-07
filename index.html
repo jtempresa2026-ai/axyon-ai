@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Axyon AI — Automação Inteligente</title>
+  <meta name="description" content="Axyon AI cria automações inteligentes para atendimento, vendas e comunicação empresarial.">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      background:#07090d;
+      color:#f5f7fa;
+      line-height:1.6
+    }
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1100px,92%);margin:auto}
+    header{
+      padding:24px 0;
+      border-bottom:1px solid #171b24;
+      position:sticky;
+      top:0;
+      background:rgba(7,9,13,.92);
+      backdrop-filter:blur(12px);
+      z-index:10
+    }
+    nav{display:flex;justify-content:space-between;align-items:center}
+    .logo{font-size:24px;font-weight:800;letter-spacing:3px}
+    .logo span{color:#6c63ff}
+    nav a{margin-left:25px;color:#aeb5c2;font-size:14px}
+    nav a:hover{color:white}
+    .hero{
+      padding:110px 0 100px;
+      text-align:center;
+      background:
+        radial-gradient(circle at 50% 20%,#1d1945 0,transparent 45%),
+        #07090d
+    }
+    .tag{
+      display:inline-block;
+      border:1px solid #292d3a;
+      padding:8px 15px;
+      border-radius:30px;
+      color:#aeb5c2;
+      font-size:13px;
+      margin-bottom:25px
+    }
+    h1{
+      font-size:clamp(42px,7vw,76px);
+      line-height:1.02;
+      max-width:850px;
+      margin:auto
+    }
+    .gradient{
+      background:linear-gradient(90deg,#fff,#8f87ff);
+      -webkit-background-clip:text;
+      color:transparent
+    }
+    .hero p{
+      max-width:680px;
+      margin:28px auto;
+      color:#aeb5c2;
+      font-size:18px
+    }
+    .buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    .btn{
+      padding:14px 23px;
+      border-radius:9px;
+      font-weight:700;
+      display:inline-block
+    }
+    .primary{background:#6c63ff;color:white}
+    .secondary{border:1px solid #303541;color:#fff}
+    section{padding:85px 0}
+    .section-title{text-align:center;margin-bottom:45px}
+    .section-title h2{font-size:38px}
+    .section-title p{color:#89919e;margin-top:10px}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px
+    }
+    .card{
+      padding:30px;
+      border:1px solid #202530;
+      border-radius:16px;
+      background:#0c0f15
+    }
+    .icon{font-size:30px;margin-bottom:18px}
+    .card h3{margin-bottom:10px}
+    .card p{color:#929aa7;font-size:15px}
+    .steps{counter-reset:step}
+    .step{
+      border-left:2px solid #6c63ff;
+      padding:5px 0 5px 28px;
+      margin:25px auto;
+      max-width:700px
+    }
+    .step h3{margin-bottom:5px}
+    .step p{color:#929aa7}
+    .contact{
+      text-align:center;
+      border:1px solid #202530;
+      border-radius:20px;
+      padding:65px 25px;
+      background:linear-gradient(145deg,#0e1119,#0a0c11)
+    }
+    .contact h2{font-size:40px;margin-bottom:15px}
+    .contact p{color:#929aa7;margin-bottom:25px}
+    footer{
+      border-top:1px solid #171b24;
+      padding:30px 0;
+      color:#737b88;
+      font-size:13px
+    }
+    footer .container{
+      display:flex;
+      justify-content:space-between;
+      gap:15px;
+      flex-wrap:wrap
+    }
+    @media(max-width:700px){
+      nav a{display:none}
+      .grid{grid-template-columns:1fr}
+      .hero{padding:80px 0}
+      .contact h2{font-size:30px}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="#" class="logo">AXYON<span>AI</span></a>
+      <div>
+        <a href="#solucoes">Soluções</a>
+        <a href="#processo">Processo</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <div class="tag">INTELIGÊNCIA ARTIFICIAL • AUTOMAÇÃO • ATENDIMENTO</div>
+
+    <h1>
+      Seu atendimento não precisa
+      <span class="gradient">parar quando você dorme.</span>
+    </h1>
+
+    <p>
+      A Axyon AI cria automações inteligentes para empresas que querem
+      responder melhor, organizar conversas e transformar atendimento
+      em oportunidade.
+    </p>
+
+    <div class="buttons">
+      <a class="btn primary" href="#contato">Conheça nossas soluções</a>
+      <a class="btn secondary" href="#solucoes">Ver soluções</a>
+    </div>
+  </div>
+</section>
+
+<section id="solucoes">
+  <div class="container">
+    <div class="section-title">
+      <h2>Soluções inteligentes</h2>
+      <p>Tecnologia aplicada aos processos que realmente importam.</p>
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="icon">🤖</div>
+        <h3>Atendimento com IA</h3>
+        <p>
+          Assistentes virtuais capazes de responder clientes,
+          esclarecer dúvidas e encaminhar atendimentos.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💬</div>
+        <h3>Automação de WhatsApp</h3>
+        <p>
+          Organize conversas, automatize respostas e conduza
+          clientes durante o processo de atendimento.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⚡</div>
+        <h3>Automação comercial</h3>
+        <p>
+          Automatize tarefas repetitivas e crie processos
+          mais rápidos para sua equipe comercial.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="processo">
+  <div class="container">
+    <div class="section-title">
+      <h2>Como trabalhamos</h2>
+      <p>Automação pensada para a realidade de cada negócio.</p>
+    </div>
+
+    <div class="step">
+      <h3>01 — Entender</h3>
+      <p>
+        Analisamos o atendimento e identificamos onde a automação
+        pode gerar mais resultado.
+      </p>
+    </div>
+
+    <div class="step">
+      <h3>02 — Construir</h3>
+      <p>
+        Desenvolvemos fluxos personalizados utilizando inteligência
+        artificial e automação.
+      </p>
+    </div>
+
+    <div class="step">
+      <h3>03 — Evoluir</h3>
+      <p>
+        Ajustamos os processos conforme a empresa cresce e novas
+        necessidades aparecem.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="container">
+    <div class="contact">
+      <h2>Vamos automatizar seu negócio?</h2>
+      <p>
+        Fale com a Axyon AI e descubra como a inteligência artificial
+        pode melhorar o atendimento da sua empresa.
+      </p>
+
+      <!-- Trocaremos este número pelo WhatsApp oficial da Axyon -->
+      <a class="btn primary" href="https://wa.me/5517999999999">
+        Falar com a Axyon AI
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <span>© 2026 Axyon AI. Todos os direitos reservados.</span>
+    <span>São José do Rio Preto — SP</span>
+  </div>
+</footer>
+
+</body>
+</html>
