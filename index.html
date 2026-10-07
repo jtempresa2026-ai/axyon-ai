@@ -3,128 +3,455 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Axyon AI — Automação Inteligente</title>
-  <meta name="description" content="Axyon AI cria automações inteligentes para atendimento, vendas e comunicação empresarial.">
+
+  <title>Axyon AI | Automação Inteligente para Empresas</title>
+
+  <meta name="description" content="Axyon AI cria automações inteligentes para empresas, com atendimento automatizado, WhatsApp e soluções de inteligência artificial.">
+
+  <meta name="robots" content="index, follow">
+
   <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{
-      font-family:Arial,Helvetica,sans-serif;
-      background:#07090d;
-      color:#f5f7fa;
-      line-height:1.6
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    a{text-decoration:none;color:inherit}
-    .container{width:min(1100px,92%);margin:auto}
-    header{
-      padding:24px 0;
-      border-bottom:1px solid #171b24;
-      position:sticky;
-      top:0;
-      background:rgba(7,9,13,.92);
-      backdrop-filter:blur(12px);
-      z-index:10
+
+    html {
+      scroll-behavior: smooth;
     }
-    nav{display:flex;justify-content:space-between;align-items:center}
-    .logo{font-size:24px;font-weight:800;letter-spacing:3px}
-    .logo span{color:#6c63ff}
-    nav a{margin-left:25px;color:#aeb5c2;font-size:14px}
-    nav a:hover{color:white}
-    .hero{
-      padding:110px 0 100px;
-      text-align:center;
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #10131a;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1180px;
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #eceef5;
+    }
+
+    nav {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      background: linear-gradient(90deg, #0066ff, #7b2cff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #414655;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #5c2cff;
+    }
+
+    .nav-button {
+      padding: 11px 20px;
+      border-radius: 10px;
+      color: white !important;
+      background: linear-gradient(90deg, #0066ff, #7b2cff);
+      box-shadow: 0 8px 25px rgba(72, 55, 255, 0.22);
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 110px 0 100px;
+      position: relative;
+      overflow: hidden;
       background:
-        radial-gradient(circle at 50% 20%,#1d1945 0,transparent 45%),
-        #07090d
+        radial-gradient(circle at 15% 20%, rgba(0,102,255,0.09), transparent 30%),
+        radial-gradient(circle at 85% 20%, rgba(123,44,255,0.10), transparent 30%),
+        #ffffff;
     }
-    .tag{
-      display:inline-block;
-      border:1px solid #292d3a;
-      padding:8px 15px;
-      border-radius:30px;
-      color:#aeb5c2;
-      font-size:13px;
-      margin-bottom:25px
+
+    .hero-content {
+      max-width: 850px;
     }
-    h1{
-      font-size:clamp(42px,7vw,76px);
-      line-height:1.02;
-      max-width:850px;
-      margin:auto
+
+    .badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 50px;
+      background: #f3f5ff;
+      color: #5530d9;
+      border: 1px solid #e2e4ff;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 25px;
     }
-    .gradient{
-      background:linear-gradient(90deg,#fff,#8f87ff);
-      -webkit-background-clip:text;
-      color:transparent
+
+    h1 {
+      font-size: clamp(44px, 7vw, 78px);
+      line-height: 1.02;
+      letter-spacing: -3px;
+      margin-bottom: 28px;
+      color: #0c0f16;
     }
-    .hero p{
-      max-width:680px;
-      margin:28px auto;
-      color:#aeb5c2;
-      font-size:18px
+
+    .gradient-text {
+      background: linear-gradient(90deg, #0066ff, #7b2cff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-    .buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-    .btn{
-      padding:14px 23px;
-      border-radius:9px;
-      font-weight:700;
-      display:inline-block
+
+    .hero p {
+      max-width: 700px;
+      font-size: 20px;
+      color: #5d6472;
+      margin-bottom: 38px;
     }
-    .primary{background:#6c63ff;color:white}
-    .secondary{border:1px solid #303541;color:#fff}
-    section{padding:85px 0}
-    .section-title{text-align:center;margin-bottom:45px}
-    .section-title h2{font-size:38px}
-    .section-title p{color:#89919e;margin-top:10px}
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:20px
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
     }
-    .card{
-      padding:30px;
-      border:1px solid #202530;
-      border-radius:16px;
-      background:#0c0f15
+
+    .btn {
+      padding: 15px 24px;
+      border-radius: 11px;
+      font-weight: 700;
+      transition: 0.25s;
+      display: inline-block;
     }
-    .icon{font-size:30px;margin-bottom:18px}
-    .card h3{margin-bottom:10px}
-    .card p{color:#929aa7;font-size:15px}
-    .steps{counter-reset:step}
-    .step{
-      border-left:2px solid #6c63ff;
-      padding:5px 0 5px 28px;
-      margin:25px auto;
-      max-width:700px
+
+    .btn-primary {
+      color: white;
+      background: linear-gradient(90deg, #0066ff, #7b2cff);
+      box-shadow: 0 10px 30px rgba(78, 65, 255, 0.24);
     }
-    .step h3{margin-bottom:5px}
-    .step p{color:#929aa7}
-    .contact{
-      text-align:center;
-      border:1px solid #202530;
-      border-radius:20px;
-      padding:65px 25px;
-      background:linear-gradient(145deg,#0e1119,#0a0c11)
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 35px rgba(78, 65, 255, 0.32);
     }
-    .contact h2{font-size:40px;margin-bottom:15px}
-    .contact p{color:#929aa7;margin-bottom:25px}
-    footer{
-      border-top:1px solid #171b24;
-      padding:30px 0;
-      color:#737b88;
-      font-size:13px
+
+    .btn-secondary {
+      border: 1px solid #dfe2ea;
+      background: #fff;
+      color: #252936;
     }
-    footer .container{
-      display:flex;
-      justify-content:space-between;
-      gap:15px;
-      flex-wrap:wrap
+
+    .btn-secondary:hover {
+      border-color: #7550ff;
+      color: #5b32e8;
     }
-    @media(max-width:700px){
-      nav a{display:none}
-      .grid{grid-template-columns:1fr}
-      .hero{padding:80px 0}
-      .contact h2{font-size:30px}
+
+    /* SECTIONS */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-header {
+      max-width: 700px;
+      margin-bottom: 50px;
+    }
+
+    .section-label {
+      color: #6235e8;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.1;
+      margin-bottom: 18px;
+      color: #11141b;
+    }
+
+    .section-header p {
+      color: #687080;
+      font-size: 17px;
+    }
+
+    /* SOLUTIONS */
+
+    .solutions {
+      background: #fafbff;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e7e9f1;
+      border-radius: 18px;
+      padding: 34px;
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #c8baff;
+      box-shadow: 0 18px 45px rgba(35, 31, 75, 0.08);
+    }
+
+    .icon {
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      margin-bottom: 24px;
+      background: linear-gradient(135deg, #0066ff, #7b2cff);
+      color: white;
+      font-size: 22px;
+      box-shadow: 0 8px 22px rgba(76, 52, 255, 0.20);
+    }
+
+    .card h3 {
+      font-size: 21px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #687080;
+      font-size: 15px;
+    }
+
+    /* PROCESS */
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .process {
+      padding: 25px 0;
+      border-top: 2px solid #e7e9f1;
+    }
+
+    .number {
+      font-size: 14px;
+      font-weight: 900;
+      color: #6536e8;
+      margin-bottom: 15px;
+    }
+
+    .process h3 {
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .process p {
+      color: #687080;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background:
+        radial-gradient(circle at 90% 50%, rgba(123,44,255,0.08), transparent 35%),
+        #f9faff;
+    }
+
+    .about-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-text p {
+      color: #626a79;
+      font-size: 17px;
+      margin-bottom: 18px;
+    }
+
+    .highlight {
+      padding: 35px;
+      border-radius: 22px;
+      background: white;
+      border: 1px solid #e5e7ef;
+      box-shadow: 0 20px 50px rgba(40, 37, 80, 0.07);
+    }
+
+    .highlight strong {
+      display: block;
+      font-size: 24px;
+      margin-bottom: 12px;
+      background: linear-gradient(90deg, #0066ff, #7b2cff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .highlight p {
+      color: #687080;
+    }
+
+    /* CTA */
+
+    .cta {
+      padding: 100px 0;
+    }
+
+    .cta-box {
+      position: relative;
+      overflow: hidden;
+      border-radius: 25px;
+      padding: 65px;
+      background: linear-gradient(120deg, #075eff, #6d25ef);
+      color: white;
+      box-shadow: 0 25px 70px rgba(63, 45, 230, 0.25);
+    }
+
+    .cta-box h2 {
+      color: white;
+      max-width: 650px;
+    }
+
+    .cta-box p {
+      max-width: 620px;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: white;
+      color: #4324d0;
+      padding: 15px 25px;
+      border-radius: 10px;
+      font-weight: 800;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid #e8eaf0;
+      padding: 35px 0;
+      background: #ffffff;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      font-weight: 900;
+      background: linear-gradient(90deg, #0066ff, #7b2cff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: #687080;
+    }
+
+    .footer-links a:hover {
+      color: #5c2cff;
+    }
+
+    .copyright {
+      width: 100%;
+      color: #9298a5;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 75px 0 70px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .cards,
+      .process-grid,
+      .about-box {
+        grid-template-columns: 1fr;
+      }
+
+      .about-box {
+        gap: 30px;
+      }
+
+      .cta-box {
+        padding: 40px 28px;
+      }
+
+      .footer-content {
+        align-items: flex-start;
+        flex-direction: column;
+      }
     }
   </style>
 </head>
@@ -134,11 +461,13 @@
 <header>
   <div class="container">
     <nav>
-      <a href="#" class="logo">AXYON<span>AI</span></a>
-      <div>
+      <a href="#" class="logo">AXYON AI</a>
+
+      <div class="nav-links">
         <a href="#solucoes">Soluções</a>
-        <a href="#processo">Processo</a>
-        <a href="#contato">Contato</a>
+        <a href="#processo">Como funciona</a>
+        <a href="#empresa">A Axyon AI</a>
+        <a href="#contato" class="nav-button">Fale conosco</a>
       </div>
     </nav>
   </div>
@@ -146,125 +475,334 @@
 
 <main>
 
-<section class="hero">
-  <div class="container">
-    <div class="tag">INTELIGÊNCIA ARTIFICIAL • AUTOMAÇÃO • ATENDIMENTO</div>
+  <!-- HERO -->
 
-    <h1>
-      Seu atendimento não precisa
-      <span class="gradient">parar quando você dorme.</span>
-    </h1>
+  <section class="hero">
+    <div class="container">
 
-    <p>
-      A Axyon AI cria automações inteligentes para empresas que querem
-      responder melhor, organizar conversas e transformar atendimento
-      em oportunidade.
-    </p>
+      <div class="hero-content">
 
-    <div class="buttons">
-      <a class="btn primary" href="#contato">Conheça nossas soluções</a>
-      <a class="btn secondary" href="#solucoes">Ver soluções</a>
-    </div>
-  </div>
-</section>
+        <span class="badge">INTELIGÊNCIA ARTIFICIAL & AUTOMAÇÃO</span>
 
-<section id="solucoes">
-  <div class="container">
-    <div class="section-title">
-      <h2>Soluções inteligentes</h2>
-      <p>Tecnologia aplicada aos processos que realmente importam.</p>
-    </div>
+        <h1>
+          Seu atendimento pode ser
+          <span class="gradient-text">mais inteligente.</span>
+        </h1>
 
-    <div class="grid">
-
-      <div class="card">
-        <div class="icon">🤖</div>
-        <h3>Atendimento com IA</h3>
         <p>
-          Assistentes virtuais capazes de responder clientes,
-          esclarecer dúvidas e encaminhar atendimentos.
+          A Axyon AI cria soluções de inteligência artificial e automação
+          para empresas que querem melhorar o atendimento, organizar
+          processos e transformar conversas em oportunidades.
         </p>
-      </div>
 
-      <div class="card">
-        <div class="icon">💬</div>
-        <h3>Automação de WhatsApp</h3>
-        <p>
-          Organize conversas, automatize respostas e conduza
-          clientes durante o processo de atendimento.
-        </p>
-      </div>
+        <div class="buttons">
+          <a
+            href="https://wa.me/5517992288797"
+            target="_blank"
+            class="btn btn-primary">
+            Falar com a Axyon AI
+          </a>
 
-      <div class="card">
-        <div class="icon">⚡</div>
-        <h3>Automação comercial</h3>
-        <p>
-          Automatize tarefas repetitivas e crie processos
-          mais rápidos para sua equipe comercial.
-        </p>
+          <a href="#solucoes" class="btn btn-secondary">
+            Conhecer soluções
+          </a>
+        </div>
+
       </div>
 
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="processo">
-  <div class="container">
-    <div class="section-title">
-      <h2>Como trabalhamos</h2>
-      <p>Automação pensada para a realidade de cada negócio.</p>
+
+  <!-- SOLUÇÕES -->
+
+  <section class="solutions" id="solucoes">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <div class="section-label">
+          Soluções
+        </div>
+
+        <h2>
+          Tecnologia para tornar sua operação mais eficiente.
+        </h2>
+
+        <p>
+          Desenvolvemos automações pensadas para as necessidades
+          de cada negócio.
+        </p>
+
+      </div>
+
+
+      <div class="cards">
+
+        <div class="card">
+
+          <div class="icon">AI</div>
+
+          <h3>
+            Atendimento com IA
+          </h3>
+
+          <p>
+            Assistentes inteligentes capazes de responder clientes,
+            organizar informações e encaminhar atendimentos quando
+            necessário.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">WA</div>
+
+          <h3>
+            Automação de WhatsApp
+          </h3>
+
+          <p>
+            Automatize conversas e processos para melhorar a velocidade
+            de resposta e oferecer uma experiência mais organizada.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="icon">⚡</div>
+
+          <h3>
+            Automação de processos
+          </h3>
+
+          <p>
+            Conecte ferramentas e automatize tarefas repetitivas para
+            reduzir trabalho manual e aumentar a produtividade.
+          </p>
+
+        </div>
+
+      </div>
+
     </div>
 
-    <div class="step">
-      <h3>01 — Entender</h3>
-      <p>
-        Analisamos o atendimento e identificamos onde a automação
-        pode gerar mais resultado.
-      </p>
+  </section>
+
+
+  <!-- PROCESSO -->
+
+  <section id="processo">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <div class="section-label">
+          Nosso processo
+        </div>
+
+        <h2>
+          Da necessidade à automação.
+        </h2>
+
+        <p>
+          Criamos soluções de forma estruturada, buscando entender
+          primeiro o problema antes de definir a tecnologia.
+        </p>
+
+      </div>
+
+
+      <div class="process-grid">
+
+        <div class="process">
+
+          <div class="number">
+            01 — ENTENDER
+          </div>
+
+          <h3>
+            Conhecemos o negócio
+          </h3>
+
+          <p>
+            Identificamos os processos, necessidades e oportunidades
+            de automação.
+          </p>
+
+        </div>
+
+
+        <div class="process">
+
+          <div class="number">
+            02 — CONSTRUIR
+          </div>
+
+          <h3>
+            Desenvolvemos a solução
+          </h3>
+
+          <p>
+            Estruturamos a automação de acordo com o fluxo e os
+            objetivos definidos.
+          </p>
+
+        </div>
+
+
+        <div class="process">
+
+          <div class="number">
+            03 — EVOLUIR
+          </div>
+
+          <h3>
+            Melhoramos continuamente
+          </h3>
+
+          <p>
+            Ajustamos a solução conforme as necessidades do negócio
+            evoluem.
+          </p>
+
+        </div>
+
+      </div>
+
     </div>
 
-    <div class="step">
-      <h3>02 — Construir</h3>
-      <p>
-        Desenvolvemos fluxos personalizados utilizando inteligência
-        artificial e automação.
-      </p>
+  </section>
+
+
+  <!-- EMPRESA -->
+
+  <section class="about" id="empresa">
+
+    <div class="container">
+
+      <div class="about-box">
+
+        <div class="about-text">
+
+          <div class="section-label">
+            A Axyon AI
+          </div>
+
+          <h2>
+            Inteligência artificial aplicada aos negócios.
+          </h2>
+
+          <p>
+            A Axyon AI trabalha com automação e inteligência artificial
+            para ajudar empresas a melhorar seus processos e seu
+            relacionamento com clientes.
+          </p>
+
+          <p>
+            Nosso objetivo é transformar tarefas repetitivas em processos
+            mais rápidos, organizados e inteligentes.
+          </p>
+
+        </div>
+
+
+        <div class="highlight">
+
+          <strong>
+            Tecnologia com propósito.
+          </strong>
+
+          <p>
+            Cada automação deve resolver um problema real. Por isso,
+            nossas soluções são estruturadas de acordo com o contexto
+            e as necessidades de cada empresa.
+          </p>
+
+        </div>
+
+      </div>
+
     </div>
 
-    <div class="step">
-      <h3>03 — Evoluir</h3>
-      <p>
-        Ajustamos os processos conforme a empresa cresce e novas
-        necessidades aparecem.
-      </p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="contato">
-  <div class="container">
-    <div class="contact">
-      <h2>Vamos automatizar seu negócio?</h2>
-      <p>
-        Fale com a Axyon AI e descubra como a inteligência artificial
-        pode melhorar o atendimento da sua empresa.
-      </p>
 
-      <!-- Trocaremos este número pelo WhatsApp oficial da Axyon -->
-      <a class="btn primary" href="https://wa.me/5517999999999">
-        Falar com a Axyon AI
-      </a>
+  <!-- CONTATO -->
+
+  <section class="cta" id="contato">
+
+    <div class="container">
+
+      <div class="cta-box">
+
+        <h2>
+          Vamos descobrir o que podemos automatizar no seu negócio.
+        </h2>
+
+        <p>
+          Entre em contato com a Axyon AI e conheça nossas soluções
+          de inteligência artificial e automação.
+        </p>
+
+        <a
+          href="https://wa.me/5517992288797"
+          target="_blank"
+          class="cta-button">
+          Falar pelo WhatsApp
+        </a>
+
+      </div>
+
     </div>
-  </div>
-</section>
+
+  </section>
 
 </main>
 
+
+<!-- FOOTER -->
+
 <footer>
+
   <div class="container">
-    <span>© 2026 Axyon AI. Todos os direitos reservados.</span>
-    <span>São José do Rio Preto — SP</span>
+
+    <div class="footer-content">
+
+      <div class="footer-brand">
+        AXYON AI
+      </div>
+
+      <div class="footer-links">
+
+        <a
+          href="https://wa.me/5517992288797"
+          target="_blank">
+          WhatsApp
+        </a>
+
+        <a
+          href="https://sites.google.com/view/axyon-politica-privacidade/p%C3%A1gina-inicial"
+          target="_blank">
+          Política de Privacidade
+        </a>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 Axyon AI. Todos os direitos reservados.
+      </div>
+
+    </div>
+
   </div>
+
 </footer>
 
 </body>
